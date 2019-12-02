@@ -36,46 +36,46 @@ do
       ;;
       
     r)
-      USER="${OPTARG}"
-      rm -r /home/${USER}
-      if [ $? -eq 0 ]; then
-        echo "Se ha eliminado el Home del usuario: ${USER} "
-      else
+ 	USER="${OPTARG}"
+      	rm -r /home/${USER}
+      	if [ $? -eq 0 ]; then
+        	echo "Se ha eliminado el Home del usuario: ${USER} "
+      	else
 		echo "No se ha podido eliminar el Home del usuario"
-      fi
-      ;;
+      	fi
+      	;;
       
     a)
-	  USER="${OPTARG}"
-	  cp -r /home/${USER} /home/m16/Escritorio/${USER}.cs
-	  if [ $? -eq 0 ]; then
-        echo "La copia de seguridad realizada con exito al usuario: ${USER}"
-      else
+    	USER="${OPTARG}"
+	cp -r /home/${USER} /home/m16/Escritorio/${USER}.cs
+	if [ $? -eq 0 ]; then
+        	echo "La copia de seguridad realizada con exito al usuario: ${USER}"
+      	else
 		echo "No se ha podido realizar la copia de seguridad"
-      fi
-      ;;
+      	fi
+      	;;
       
     z)
-	  USER="${OPTARG}"
-      usermod -L ${USER}
-      if [ $? -eq 0 ]; then
-        echo "Ha sido deshabilitado el usuario: ${USER} "
-      else
+    	USER="${OPTARG}"
+      	usermod -L ${USER}
+      	if [ $? -eq 0 ]; then
+        	echo "Ha sido deshabilitado el usuario: ${USER} "
+      	else
 		echo "No se ha podido deshabilitar el usuario"
-      fi
-      ;;
+      	fi
+      	;;
       
     \?)
-		echo "ERROR: Invalid option -$OPTARG"
-		usage
-		;;
-	:)
-		echo "ERROR: -$OPTARG requires an argument."
-		;;
-	*)
-		echo "Unknown error."
-		usage
-		;;
+	echo "ERROR: Invalid option -$OPTARG"
+	usage
+	;;
+    :)
+	echo "ERROR: -$OPTARG requires an argument."
+	;;
+    *)
+	echo "Unknown error."
+	usage
+	;;
   esac
 done
 
