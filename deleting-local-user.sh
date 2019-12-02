@@ -2,7 +2,7 @@
 #https://github.com/iancusio/practica18
 function usage() {
 cat <<EOF	
-	Usage: ${0} [-drac] USER [USERN] 
+	Usage: ${0} [-draz] USER [USERN] 
 	Disable a local Linux account. 
 	-d Deletes accounts instead of disabling them. 
 	-r Removes the home directory associated with the account(s). 
@@ -47,7 +47,7 @@ do
       
     a)
     	USER="${OPTARG}"
-	cp -r /home/${USER} /home/m16/Escritorio/${USER}.cs
+	cp -r /home/${USER} /home/ausias/${USER}.cs
 	if [ $? -eq 0 ]; then
         	echo "La copia de seguridad realizada con exito al usuario: ${USER}"
       	else
