@@ -14,12 +14,12 @@ exit 1
 
 if [[ "${UID}" -ne 0 ]]
 then
-   echo 'Es necesario ejecutar el scrip como root'
-   exit 1
+ 	echo 'Es necesario ejecutar el scrip como root'
+   	exit 1
 fi
 
 if [ $# -eq 0 ]; then
-  usage
+	usage
 fi
 
 while getopts ":d:r:a:z:" OPT
