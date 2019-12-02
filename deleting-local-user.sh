@@ -1,5 +1,5 @@
 #!/bin/bash
-#https://github.com/MiquelRentero/ASO/edit/master/proyecto18
+#https://github.com/iancusio/practica18
 function usage() {
 cat <<EOF	
 	Usage: ${0} [-drac] USER [USERN] 
